@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -12,8 +13,12 @@ const Navbar = () => {
         />
       </div>
       <div className="flex">
-        <div className="px-3 py-2 mr-2 bg-white nav-item">Home</div>
-        <div className="px-3 py-2 bg-white rounded-md nav-item">Shop</div>
+        <Link to="/" className="px-3 py-2 mr-2 bg-white nav-item">
+          Home
+        </Link>
+        <Link to="/shop" className="px-3 py-2 bg-white rounded-md nav-item">
+          Shop
+        </Link>
       </div>
     </div>
   );

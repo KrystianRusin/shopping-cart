@@ -1,11 +1,20 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Shop from "./components/Shop";
 import "./App.css";
 
 function App() {
   return (
-    <div className="w-full p-0 m-0">
-      <Navbar />
-    </div>
+    <Router>
+      <div className="w-full p-0 m-0">
+        <Navbar />
+        <Routes>
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
