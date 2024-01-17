@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div className="w-full p-0 m-0">
+      <div className="w-full p-0 m-0 font-plex-mono">
         <Navbar />
         <Routes>
           <Route path="/shop" element={<Shop />} />
