@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div className="w-full p-0 m-0 font-plex-mono">
+      <div className="w-full p-0 m-0 font-plex-mono flex flex-col justify-between min-h-screen">
         <Navbar />
         <Routes>
           <Route path="/shop" element={<Shop />} />
