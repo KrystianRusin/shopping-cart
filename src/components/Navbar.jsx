@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-5 px-20 bg-white w-full border-b border-slate-200 tracking-widest">
       <div className="text-slate-950">
-        <Link to="/" className="px-3 py-2 mr-2 bg-white min-w-4">
+        <Link to="/shopping-cart" className="px-3 py-2 mr-2 bg-white min-w-4">
           URBAN ETHER
         </Link>
       </div>
@@ -18,7 +18,10 @@ const Navbar = () => {
         />
       </div>
       <div className="flex gap-5 ">
-        <Link to="/" className="px-3 py-2 mr-2 bg-white nav-item min-w-4">
+        <Link
+          to="/shopping-cart"
+          className="px-3 py-2 mr-2 bg-white nav-item min-w-4"
+        >
           HOME
         </Link>
         <Link

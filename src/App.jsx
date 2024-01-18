@@ -21,7 +21,7 @@ function App() {
         <div className="min-h-screen flex flex-col justify-start p-12">
           <Routes>
             <Route path="/shop" element={<Shop addToCart={addToCart} />} />
-            <Route path="/" element={<Home />} />
+            <Route path="/shopping-cart" element={<Home />} />
             <Route path="/cart" element={<Cart cart={cart} />} />
           </Routes>
         </div>
