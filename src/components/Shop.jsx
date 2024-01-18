@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Product from "./Product";
 
-const Shop = () => {
+const Shop = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -11,12 +12,19 @@ const Shop = () => {
   }, []);
 
   return (
-    <div className="flex gap-6 flex-wrap justify-center my-12">
-      {products.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
+    <div>
+      <h2 className="px-12">MEN&rsquo;S APARREL</h2>
+      <div className="flex gap-6 flex-wrap justify-center my-12">
+        {products.map((product) => (
+          <Product key={product.id} product={product} addToCart={addToCart} />
+        ))}
+      </div>
     </div>
   );
+};
+
+Shop.propTypes = {
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default Shop;
