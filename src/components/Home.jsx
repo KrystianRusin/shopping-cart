@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [catalogue, setCatalogue] = useState([]);
+  const [menCatalogue, setmenCatalogue] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/men's clothing?limit=5")
@@ -13,12 +13,12 @@ const Home = () => {
 
     fetch("https://fakestoreapi.com/products/category/men's clothing?limit=10")
       .then((res) => res.json())
-      .then((json) => setCatalogue(json));
+      .then((json) => setmenCatalogue(json));
   }, []);
 
   return (
     <div className="flex flex-col min-h-screen items-center">
-      <h3>SPRING/SUMMER 24</h3>
+      <h3 className="p-2">SPRING/SUMMER 24</h3>
       <div className="flex justify-center">
         <div className="max-w-[450px] min-h-[300px] p-4">
           <Carousel showThumbs={false} className="h-full">
@@ -38,7 +38,7 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
-      <div className="flex flex-col ">
+      <div className="flex flex-col my-12">
         <h3 className="px-4">MEN&rsquo;S APARREL</h3>
         <div className="flex justify-center mt-10  w-[1400px] m-4">
           <div className="w-[1400px] max-h-[400px] border border-dashed border-slate-950 border-opacity-50">
@@ -51,7 +51,7 @@ const Home = () => {
               centerSlidePercentage={20}
               onClickItem={(index, item) => console.log(index, item)}
             >
-              {catalogue.map((product) => (
+              {menCatalogue.map((product) => (
                 <div
                   key={product.id}
                   className="h-full flex items-center justify-center p-4 border-l border-dashed border-slate-950 border-opacity-50"

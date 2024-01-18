@@ -4,7 +4,7 @@ import "../styles/Navbar.css";
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-5 px-20 bg-white w-full border-b border-slate-200 tracking-widest">
-      <div className="text-slate-950">LORUM</div>
+      <div className="text-slate-950">URBAN ETHER</div>
       <div className="flex-grow max-w-[900px] flex just">
         <input
           className="px-3 py-2 rounded-md border w-full border-slate-950 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:border-transparent"
