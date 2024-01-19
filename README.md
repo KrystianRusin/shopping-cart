@@ -1,7 +1,7 @@
-#Store Website
+# Store Website
 Demo store webpage built using React and Tailwindcss, using FakeStoreAPI for data Population
 
-#Features to Implement:
+# Features to Implement:
 - Change to different API that allows adding custom items
 - Populate dummy data with new items
 - Add Search Bar functionality
