@@ -12,6 +12,7 @@ function App() {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
+    alert("Product Added to Cart");
   };
 
   return (
